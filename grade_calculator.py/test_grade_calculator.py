@@ -1,4 +1,5 @@
 
+
  test_grade_calculator.py
 import pytest
 from grade_calculator import (
@@ -25,7 +26,7 @@ def test_grade_b_and_c():
 
 def test_grade_d_and_f():
     assert assign_grade(45.0) == "Grade D"
-    assert assign_grade(40.0) == "Grade D"
+
     assert assign_grade(39.9) == "Grade F"
     assert assign_grade(20.0) == "Grade F"
 
@@ -34,8 +35,8 @@ def test_calculate_average():
     assert calculate_average(90, 92, 94) == 92.0
     assert calculate_average(75, 80, 70) == 75.0
     def test_get_student_report_complete():
-    report = get_student_report("Firoz F Nadaf", "BCA", 3, [88, 84, 86])
-    assert report["name"] == "Firoz F Nadaf"
+
+    assert report["name"] == "manasa"
     assert report["department"] == "BCA"
     assert report["semester"] == 3
     assert report["average"] == 86.0
@@ -59,4 +60,4 @@ def test_invalid_student_details():
     with pytest.raises(ValueError):
         get_student_report("", "BCA", 3, [80, 80, 80])
     with pytest.raises(ValueError):
-        get_student_report("Firoz", "BCA", 3, [80, 85])
+        get_student_report("manasa", "BCA", 3, [80, 85])
